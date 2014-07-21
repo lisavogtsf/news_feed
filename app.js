@@ -5,10 +5,12 @@ var express = require('express'),
   app = express();
 
 
+app.set('view engine', 'ejs');
+
 // Routes
 app.get('/', function(req, res){
-  // res.render("views/site/index");
-  res.send("home");
+  res.render("site/index");
+  // res.send("home");
 });
 
 app.get('/about', function(req, res){
