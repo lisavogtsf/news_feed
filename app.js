@@ -7,15 +7,18 @@ var express = require('express'),
 
 // Routes
 app.get('/', function(req, res){
-  res.render("views/site/index");
+  // res.render("views/site/index");
+  res.send("home");
 });
 
 app.get('/about', function(req, res){
-  res.render("views/site/about");
+  // res.render("views/site/about");
+  res.send("about");
 });
 
 app.get('/contact', function(req, res){
-  res.render("views/site/contact");
+  // res.render("views/site/contact");
+  res.send("contact");
 });
 
 app.listen(3000);
