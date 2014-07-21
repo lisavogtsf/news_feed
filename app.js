@@ -14,13 +14,13 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-  // res.render("views/site/about");
-  res.send("about");
+  res.render("site/about");
+  // res.send("site/about");
 });
 
 app.get('/contact', function(req, res){
-  // res.render("views/site/contact");
-  res.send("contact");
+  res.render("site/contact");
+  // res.send("contact");
 });
 
 app.get('/articles', function(req, res){
