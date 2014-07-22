@@ -5,7 +5,26 @@ var express = require('express'),
   app = express();
 
 // empty article array
-var articles = [];
+// var articles = [];
+
+// sample articles
+var articles = [{0}, {1}, {2}];
+articles[0] = {
+  article.title: "Extra! Extra!",
+  article.author: "Lois Lane",
+  article.text: "Lorem ipsum blah blah blah."
+};
+articles[1] = {
+  article.title: "Breaking news",
+  article.author: "Lana Lane",
+  article.text: "Retro Lorem ipsum blah blah blah."
+};
+articles[2] = {
+  article.title: "Local News Update",
+  article.author: "Clark Kent",
+  article.text: "Boring Lorem ipsum blah blah blah."
+};
+
 
 // select view engine, ejs
 app.set('view engine', 'ejs');
@@ -39,13 +58,13 @@ app.get('/articles/new', function(req, res){
 });
 
 // app.post('/articles', function(req, res){
-//   // res.render("views/articles");
+//   // res.render("articles");
 //   res.send("save an article");
 // });
 
 app.get('/articles/:id', function(req, res){
-  // res.render("views/articles/:id");
-  res.send("show article with given id");
+  res.render("articles/show", {article: article});
+  // res.send("show article with given id");
 });
 
 
