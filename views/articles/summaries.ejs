@@ -5,6 +5,16 @@
 <body>
   <h1>Daily Planet Article Summaries</h1>
   <h2>All the news that fits, we print!</h2>
-  <%= "display summary article" %>
+  <h2>Article summaries</h2>
+
+  <div id="display_article_summaries">
+  <ul>
+    <% key.forEach(function(story){ %>
+      <li> <%= story.title + ": " + story.text  %> </li>
+
+    <% }) %>
+  </ul>
+  </div>
+
 </body>
 </html>
